@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 # AbuseIPDB API Key
 ABUSEIPDB_API_KEY="${ABUSEIPDB_API_KEY}"
