@@ -1,7 +1,7 @@
 
 
 # AbuseIPDB API Key
-ABUSEIPDB_API_KEY="34dc64b3b380e6fbb41512832677aca7185df48f3c98b3d6aa70d7c4e36b74cfb5e1383ea34a0645"
+ABUSEIPDB_API_KEY="${ABUSEIPDB_API_KEY}"
 
 # Prompt for the app DB name
 read -p "Enter the app DB name: " DB_Name <&1
