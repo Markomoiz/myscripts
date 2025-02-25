@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Prompt for the app DB name
+read -p "Enter the app DB name: " DB_Name <&1
+
+# Prompt for the time frame with a default value of 1h if no input is given
+read -p "Enter the time frame (default is 1h): " Time_Frame
+Time_Frame=${Time_Frame:-1h}  # Use 1h if no input is provided
+
+# Execute the commands with the given or default time frame
+
+/usr/local/sbin/apm traffic -s "$DB_Name" -l "$Time_Frame"
+/usr/local/sbin/apm mysql -s "$DB_Name" -l "$Time_Frame"
+/usr/local/sbin/apm php -s "$DB_Name" -l "$Time_Frame"
